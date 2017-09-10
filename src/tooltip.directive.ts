@@ -40,7 +40,8 @@ export class Tooltip implements AfterViewInit {
 
   @Input() duration: number = 3000;
 
-  @Input() set active(val: boolean) {
+  @Input() 
+  set active(val: boolean) {
     this._active = typeof val !== 'boolean' || val != false;
     this._active
       ? this.canShow && this.showTooltip()
